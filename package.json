@@ -1,0 +1,34 @@
+{
+  "name": "vela-atelier",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Luxury watch store with React, Express, and SQLite",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "dev": "node scripts/dev.js",
+    "dev:server": "node --watch server/index.js",
+    "dev:client": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "start": "node server/index.js",
+    "test": "node --test server/tests/*.test.js",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check": "npm run format:check && npm test && npm run build"
+  },
+  "dependencies": {
+    "express": "5.3.0",
+    "express-rate-limit": "8.7.1",
+    "helmet": "8.3.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "6.1.2",
+    "prettier": "3.9.10",
+    "vite": "8.3.5"
+  }
+}
